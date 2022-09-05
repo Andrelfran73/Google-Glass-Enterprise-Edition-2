@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste JavaScript</title>
+    <meta charset="utf-8"/>
+    <style>
+    
+        h1 {
+            margin-left:480px ;
+            font-size:  50px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        h2 {
+            margin-left: 500px;
+            font-size: 30px;
+        }
+        .move {
+            margin-left: 450px;
+            font-size: 30px;
+        }
+        .lamp {
+            margin-top: 20pt;
+            margin-left: 440pt;
+              }
+    </style>
+
+<script>
+    var quebrada = false;
+
+    function mudaLampada(tipo) {
+
+        if (tipo == 1) {
+        arquivo = "_imagens/lampada-acesa.jpg";
+        }
+        if (tipo == 2) {
+        arquivo = "_imagens/lampada-apagada.jpg";
+        }
+        if (tipo == 3 ) {
+        arquivo = "_imagens/lampada-quebrada.jpg";
+        }
+        if ( !quebrada ) {
+            document.getElementById("luz").src = arquivo;
+            if (tipo == 3) {
+                quebrada = true;
+            }
+        }
+    }                        
+</script>
+   </head>
+
+
+<body>
+    <h1>Melhor usar Led!</h1>
+    <h2 class="move">Mova e retire o mouse na lâmpada!</h2>
+    <h2>Depois clique na lâmpada! </h2>
+    <img src="_imagens/lampada-apagada.jpg" class="lamp" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"/>
+</body>
+
+
+</html>

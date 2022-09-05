@@ -1,0 +1,274 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');/*fonte do google/fonts*/
+@font-face {
+    font-family: "fontelogo";
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    
+}
+
+div#interface {/*chamando id global do site*/
+    width: 1200px;/*largura*/
+    background-color: #000000;
+    margin: -20px auto 10px auto; /* centralizando margens sup/dir/inf/esq*/
+    box-shadow: 0px 0px 10px #000000;;/*desloc lateral, desloc Vert, Espalhamento, cor*/
+    padding: 20px 20px 20px 20px;/*recuo dentro das margens, sup/dir/inf/esq, se for tudo igual colocar somente 1 valor*/
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;/* espaço no começo do paragrafo*/
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    }
+
+a:hover {
+    text-decoration: underline;
+}
+header#cabeçalho img#icone {/*pocisionando o icone oculos*/
+    position: absolute;
+    left: 1110px;
+    top: 70px;
+}
+
+header#cabeçalho {
+    border-bottom: 1px #ffffff solid;/*criando a linha*/
+    height: 150px;/*altura da linha com relação ao topo*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;/*inserindo a logo marca 0px desloc. lateral 100px vertical, ATENÇÃO: ISTO NÃO É UMA IMAGEM MAS SIM UM BACK-GROUND*/
+}
+
+header#cabeçalho h1 {
+    font-family: 'fontelogo', sans-serif;
+    font-size: 30pt;
+    color: #ffffff;
+    text-shadow: 10px 10px 10px rgba(34, 12, 12, 0.6);/*desloc hor/desloc vert/espalhamento/cor*/
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabeçalho h2 {
+    font-family: 'Titillium Web', sans-serif;/*fonte do google/fonts*/
+    color: #ffffff;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.description-logo {
+    display: block;
+    float: right;
+    margin-right: 750px;
+    font-size: 10pt;
+    margin-bottom: 0px;
+}
+
+/*formatação de imagens com legendas*/
+
+figure.foto-legenda {/*chamando classe*/
+    position: relative;/*colocando a legenda da foto dentro dela*/
+    border: 8px solid white; /*largura, solida, cor */
+    box-shadow: 10px 10px 10px #8f2828;;/*configurando borda/dir /inf / espalhamento*/
+}
+figure.foto-legenda img {/*tamanho da imagem na tela */
+    width: 100%;
+    height: 100%;
+} 
+figure.foto-legenda figcaption {/*legenda*/
+    opacity: 0;/* 0% */
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,.4);/*transparencia do fundo*/
+    color: white;/*cor das letras*/
+    width: 100%;
+    height: 100%;
+    padding: 20px;/*espaçamento interno para todos os lados*/
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption { /*aparece o texto quando o mouse passa por cima */
+    opacity: 1;/* 100% */
+}
+/*formatação do menu*/
+nav#menu {
+    display: block;/*flutuando menu*/
+}
+
+nav#menu ul {/*configurando o menu*/
+list-style: none;/*retira marcadores da lista*/
+text-transform: uppercase;/*deixa em maiusculo*/
+
+position: absolute;/*deixa relacionado a posição dentro do site*/
+top: -20px;
+left: 600px;
+}
+
+nav#menu li {/*configurando as linhas de menu*/
+    display: inline-block;/*deixando o menu lado a lado*/
+    background-color: #000000;/*deixando o item em cinza claro por padrão*/
+    padding: 10px;/*criando espaçamento dentro do item*/
+    margin: 2px;/*criando espaçamento fora do item*/
+
+    transition: background-color 1s;/*configurando a transição nos menus*/
+}
+
+nav#menu li:hover {
+    background-color: #606060;/*deixando o fundo dos itens de cinza*/
+}
+
+nav#menu h1 {
+    display: none;/*escondendo o menu principal*/
+}
+
+nav#menu a {
+    color: #ffffff;/*deixando o link com a cor preta*/
+    text-decoration: none;/*retirando o sublinhado*/
+}
+
+nave#menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+section#corpo {
+    display: block;
+    width: 700px;
+    float: left;
+    border-right: 1px solid #ffffff;
+    padding-right: 20px;
+    }
+
+    article#noticiaprincipal h2 {
+        font-size: 15pt;
+        color: #ffffff;
+        padding: 5px 0px 5px 5px;
+        margin: 10px 0px 10px 0px;
+        background-color: #606060;
+    }
+
+    .direita {
+        text-align: right;
+    }
+
+    header#cab-artigo h1 {
+        font-family: 'fontelogo', sans-serif;
+        font-size: 20pt;
+        color: #ffffff;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    header#cab-artigo h2 {
+        font-size: 13pt;
+        color: #ffffff;
+        background-color: #606060;
+        margin-top: 0px;
+    }
+    header#cab-artigo h3 {
+        font-size: 12px;
+        color: #ffffff;
+        margin-top: 0px;
+    }
+
+    table#tabelaespec {
+        border: 1px solid #ffffff;/*criando a borda externa da tabela*/
+        border-spacing: 0px;/*espaçamento da tabela entre os itens*/
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    table#tabelaespec td.ce {
+    color: #000000;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bolder;
+    }
+
+    table#tabelaespec td.cd {
+        background-color:#cecece;
+        color: #000000;
+
+    }
+
+    table#tabelaespec caption {
+        color: #ffffff;
+        font-size: 13pt;
+        font-weight: bolder;
+    }
+
+    table#tabelaespec caption span {
+        display: block;
+        float: right;
+        color: #ffffff;
+        font-size: 8pt;
+        margin-top: 10px;
+    }
+
+    table#tabelaespec td {
+        border:  1px solid #000000;/*criando bordas internas*/
+        padding: 10px;
+    }
+
+
+aside#lateral {
+    display: block;
+    width: 450px; 
+    float: right;
+    background-color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px #8f2828;
+    }
+
+aside#lateral h1{
+font-family: 'fontelogo', sans-serif;
+font-size: 20pt;
+color: #ffffff; 
+margin-top: 0px;
+}
+
+aside#lateral h2{
+background-color: #606060;
+font-size: 12pt;
+color: #ffffff;
+padding: 5px;
+
+}
+footer#rodape {
+    clear:both;/*limpando as sessões (flutuações) criadas*/
+    border-top: 1px solid #606060;
+}
+footer#rodape p {
+    text-align: center;
+}
+
+iframe#filme1 {
+    width: 450px;
+    height: 300px;
+    position: relative;
+    left: 130px;
+    bottom: 5px;
+}
+
+iframe#filme2 {
+    width: 450px;
+    height: 300px;
+    position: relative;
+    left: 0px;
+    bottom: 40px;
+}
+
+.comofunfa {
+    background-color: #606060;
+font-size: 16pt;
+color: #ffffff;
+padding: 5px;
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-espec {
+    width: 450px;
+    height: 280px;
+    border: none;
+   }
+
+iframe#frame-espec::-webkit-scrollbar {
+    display: none;
+    }
+
+p .par1 {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+p {
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+h2 {
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
